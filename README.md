@@ -362,6 +362,37 @@ Even though quotes around attributes is optional, always put quotes around attri
 <a class="maia-button maia-button-secondary">Sign in</a>
 ```
 
+### HTML Tables
+
+**Use table elements appropriately.**
+
+Make use of <thead>, <tfoot>, <tbody>, and <th> elements (and Scope attribute) when appropriate.
+
+> **Note:** <tfoot> goes above <tbody> for speed reasons. You want the browser to load the footer before a table full of data.
+
+```html
+<table summary="This is a chart of invoices for 2011.">
+  <thead>
+    <tr>
+      <th scope="col">Table header 1</th>
+      <th scope="col">Table header 2</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table footer 1</td>
+      <td>Table footer 2</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table data 1</td>
+      <td>Table data 2</td>
+    </tr>
+  </tbody>
+</table>
+```
+
 ## CSS File Organization
 
 In general, the CSS file organization should follow something like this:

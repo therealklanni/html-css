@@ -558,7 +558,7 @@ padding: 0;
 
 **Omit leading "0"s in values.**
 
-Do not use put `0`s in front of values or lengths between `-1` and `1`.
+Do not use `0`s in front of values or lengths between `-1` and `1`.
 
 ```css
 font-size: .8em;

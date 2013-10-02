@@ -346,22 +346,6 @@ Also, indent them if they are child elements of a block, list, or table element.
 </table>
 ```
 
-### HTML Quotation Marks
-
-**When quoting attributes values, use double quotation marks.**
-
-Use double (`""`) rather than single quotation marks (`''`) around attribute values.
-
-Even though quotes around attributes is optional, always put quotes around attributes for readability.
-
-```html
-<!-- bad -->
-<a class='maia-button maia-button-secondary'>Sign in</a>
-
-<!-- good -->
-<a class="maia-button maia-button-secondary">Sign in</a>
-```
-
 ### HTML Tables
 
 **Use table elements appropriately.**
@@ -391,6 +375,22 @@ Make use of `<thead>`, `<tfoot>`, `<tbody>`, and `<th>` elements (and `scope` at
     </tr>
   </tbody>
 </table>
+```
+
+### HTML Quotation Marks
+
+**When quoting attributes values, use double quotation marks.**
+
+Use double (`""`) rather than single quotation marks (`''`) around attribute values.
+
+Even though quotes around attributes is optional, always put quotes around attributes for readability.
+
+```html
+<!-- bad -->
+<a class='maia-button maia-button-secondary'>Sign in</a>
+
+<!-- good -->
+<a class="maia-button maia-button-secondary">Sign in</a>
 ```
 
 ## CSS File Organization

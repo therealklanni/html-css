@@ -366,9 +366,9 @@ Even though quotes around attributes is optional, always put quotes around attri
 
 **Use table elements appropriately.**
 
-Make use of <thead>, <tfoot>, <tbody>, and <th> elements (and Scope attribute) when appropriate.
+Make use of `<thead>`, `<tfoot>`, `<tbody>`, and `<th>` elements (and `scope` attribute) when appropriate.
 
-> **Note:** <tfoot> goes above <tbody> for speed reasons. You want the browser to load the footer before a table full of data.
+> **Note:** `<tfoot>` goes above `<tbody>` for speed reasons. You want the browser to load the footer before a table full of data.
 
 ```html
 <table summary="This is a chart of invoices for 2011.">

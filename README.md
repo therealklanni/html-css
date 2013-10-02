@@ -14,7 +14,7 @@ Omit the protocol portion (`http:`, `https:`) from URLs pointing to images and o
 
 Omitting the protocol--which makes the URL relative--prevents mixed content issues and results in minor file size savings.
 
-```
+```html
 <!-- bad -->
 <script src="http://www.google.com/js/gweb/analytics/autotrack.js"></script>
 
@@ -22,7 +22,7 @@ Omitting the protocol--which makes the URL relative--prevents mixed content issu
 <script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 ```
 
-```
+```css
 /* bad */
 .example {
     background: url(http://example.com/images/thumbnail.png);
@@ -42,7 +42,7 @@ Omitting the protocol--which makes the URL relative--prevents mixed content issu
 
 Don't use tabs or mix tabs and spaces for indentation.
 
-```
+```html
 <!-- good -->
 <ul>
   <li>Fantastic
@@ -50,7 +50,7 @@ Don't use tabs or mix tabs and spaces for indentation.
 </ul>
 ```
 
-```
+```css
 /* good */
 .example {
   color: blue;
@@ -63,7 +63,7 @@ Don't use tabs or mix tabs and spaces for indentation.
 
 All code must be lowercase: This applies to HTML element names, attributes, attribute values (unless `text/CDATA`), CSS selectors, properties, and property values (with the exception of string values).
 
-```
+```html
 <!-- bad -->
 <A HREF="#">Home</A>
 
@@ -71,7 +71,7 @@ All code must be lowercase: This applies to HTML element names, attributes, attr
 <img src="google.png" alt="Google">
 ```
 
-```
+```css
 /* bad */
 color: #E5E5E5;
 
@@ -85,7 +85,7 @@ color: #e5e5e5;
 
 Trailing white spaces are unnecessary and can complicate diffs.
 
-```
+```html
 <!-- bad -->
 <p>What?∙
 
@@ -124,12 +124,12 @@ Append a contact (username or mailing list) in parentheses as with the format TO
 
 Append action items after a colon as in TODO: action item.
 
-```
+```html
 {# TODO(john.doe): revisit centering #}
 <center>Test</center>
 ```
 
-```
+```html
 <!-- TODO: remove optional tags -->
 <ul>
   <li>Apples</li>
@@ -157,7 +157,7 @@ Use tools such as the [W3C HTML validator](http://validator.w3.org/nu/) or a lin
 
 Using valid HTML is a measurable baseline quality attribute that contributes to learning about technical requirements and constraints, and that ensures proper HTML usage.
 
-```
+```html
 <!-- bad -->
 <title>Test</title>
 <article>This is only a test.
@@ -177,7 +177,7 @@ Use elements (sometimes incorrectly called "t"gs") for what they have been creat
 
 Using HTML according to its purpose is important for accessibility, reuse, and code efficiency reasons.
 
-```
+```html
 <!-- bad -->
 <div onclick="goToRecommendations();">All recommendations</div>
 
@@ -195,7 +195,7 @@ Providing alternative contents is important for accessibility reasons: A blind u
 
 > For images whose `alt` attributes would introduce redundancy, and for images whose purpose is purely decorative which you cannot immediately use CSS for, use no alternative text, as in `alt=""`.
 
-```
+```html
 <!-- bad -->
 <img src="spreadsheet.png">
 
@@ -215,7 +215,7 @@ In addition, keep the contact area as small as possible by linking as few style 
 
 Separating structure from presentation from behavior is important for maintenance reasons. It is always more expensive to change HTML documents and templates than it is to update style sheets and scripts.
 
-```
+```html
 <!-- bad -->
 <!DOCTYPE html>
 <title>HTML sucks</title>
@@ -247,7 +247,7 @@ There is no need to use entity references like `&mdash;`, `&rdquo;`, or `&#x263a
 
 The only exceptions apply to characters with special meaning in HTML (like `<` and `&`) as well as control or "i"visible" characters (like no-break spaces).
 
-```
+```html
 <!-- bad -->
 The currency symbol for the Euro is &ldquo;&eur;&rdquo;.
 
@@ -263,7 +263,7 @@ For file size optimization and scannability purposes, consider omitting optional
 
 > This approach may require a grace period to be established as a wider guideline as it’s significantly different from what web developers are typically taught. For consistency and simplicity reasons it’s best served omitting all optional tags, not just a selection.
 
-```
+```html
 <!-- OK -->
 <!DOCTYPE html>
 <html>
@@ -291,7 +291,7 @@ Specifying `type` attributes in these contexts is not necessary as HTML5 implies
 
 > This can be safely done even for older browsers.
 
-```
+```html
 <!-- bad -->
 <link rel="stylesheet" href="//www.google.com/css/maia.css"
   type="text/css">
@@ -319,13 +319,13 @@ Also, indent them if they are child elements of a block, list, or table element.
 
 > If you run into issues around whitespace between list items it’s acceptable to put all li elements in one line. A linter is encouraged to throw a warning instead of an error.
 
-```
+```html
 <blockquote>
   <p><em>Space</em>, the final frontier.</p>
 </blockquote>
 ```
 
-```
+```html
 <ul>
   <li>Moe
   <li>Larry
@@ -333,7 +333,7 @@ Also, indent them if they are child elements of a block, list, or table element.
 </ul>
 ```
 
-```
+```html
 <table>
   <thead>
     <tr>
@@ -352,7 +352,7 @@ Also, indent them if they are child elements of a block, list, or table element.
 
 Use double (`""`) rather than single quotation marks (`''`) around attribute values.
 
-```
+```html
 <!-- bad -->
 <a class='maia-button maia-button-secondary'>Sign in</a>
 
@@ -407,7 +407,7 @@ Elements that occur **exactly once** inside a page should use IDs, otherwise, us
 
 When styling a component, start with a class namespace (prefer class names over ids), prefer direct descendant selectors by default, and use as little specificity as possible. Here is a good example:
 
-```
+```html
 <ul class="category-list">
   <li class="item">Category 1</li>
   <li class="item">Category 2</li>
@@ -415,7 +415,7 @@ When styling a component, start with a class namespace (prefer class names over 
 </ul>
 ```
 
-```
+```css
 /* class namespace */
 .category-list {
 
@@ -447,7 +447,7 @@ Generic names are simply a fallback for elements that have no particular or no m
 
 Using functional or generic names reduces the probability of unnecessary document or template changes.
 
-```
+```css
 /* bad: meaningless */
 #yee-1901 {}
 
@@ -456,7 +456,7 @@ Using functional or generic names reduces the probability of unnecessary documen
 .clear {}
 ```
 
-```
+```css
 /* good: specific */
 #gallery {}
 #login {}
@@ -475,7 +475,7 @@ Unless necessary (for example with helper classes), do not use element names in 
 
 Avoiding unnecessary ancestor selectors is useful for [performance reasons](http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/.
 
-```
+```css
 /* bad */
 ul#example {}
 div.error {}
@@ -493,7 +493,7 @@ CSS offers a variety of [shorthand](http://www.w3.org/TR/CSS21/about.html#shorth
 
 Using shorthand properties is useful for code efficiency and understandability.
 
-```
+```css
 /* bad */
 border-top-style: none;
 font-family: palatino, georgia, serif;
@@ -516,7 +516,7 @@ padding: 0 1em 2em;
 
 Do not use units after `0` values unless they are required.
 
-```
+```css
 margin: 0;
 padding: 0;
 ```
@@ -527,7 +527,7 @@ padding: 0;
 
 Do not use put `0`s in front of values or lengths between `-1` and `1`.
 
-```
+```css
 font-size: .8em;
 ```
 
@@ -537,7 +537,7 @@ font-size: .8em;
 
 For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.
 
-```
+```css
 /* bad */
 color: #eebbcc;
 
@@ -553,7 +553,7 @@ In large projects as well as for code that gets embedded in other projects or on
 
 Using namespaces helps preventing naming conflicts and can make maintenance easier, for example in search and replace operations.
 
-```
+```css
 .adw-help {} /* AdWords */
 #maia-note {} /* Maia */
 ```
@@ -564,7 +564,7 @@ Using namespaces helps preventing naming conflicts and can make maintenance easi
 
 Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
 
-```
+```css
 /* bad: does not separate the words “demo” and “image” */
 .demoimage {}
 
@@ -572,7 +572,7 @@ Do not concatenate words and abbreviations in selectors by any characters (inclu
 .error_status {}
 ```
 
-```
+```css
 /* good */
 #video-id {}
 .ads-sample {}
@@ -594,7 +594,7 @@ Put declarations in alphabetical order in order to achieve consistent code in a 
 
 Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).
 
-```
+```css
 background: fuchsia;
 border: 1px solid;
 -moz-border-radius: 4px;
@@ -611,7 +611,7 @@ text-indent: 2em;
 
 Indent all [block content](http://www.w3.org/TR/CSS21/syndata.html#block), that is rules within rules as well as declarations, so to reflect hierarchy and improve understanding.
 
-```
+```css
 @media screen, projection {
 
   html {
@@ -628,7 +628,7 @@ Indent all [block content](http://www.w3.org/TR/CSS21/syndata.html#block), that 
 
 End every declaration with a semicolon for consistency and extensibility reasons.
 
-```
+```css
 /* bad */
 .test {
   display: block;
@@ -648,7 +648,7 @@ End every declaration with a semicolon for consistency and extensibility reasons
 
 Always use a single space between property and value (but no space between property and colon) for consistency reasons.
 
-```
+```css
 /* bad */
 h3 {
   font-weight:bold;
@@ -668,7 +668,7 @@ Always use a single space between the last selector and the opening brace that b
 
 The opening brace should be on the same line as the last selector in a given rule.
 
-```
+```css
 /* bad: missing space */
 #video{
   margin-top: 1em;
@@ -681,7 +681,7 @@ The opening brace should be on the same line as the last selector in a given rul
 }
 ```
 
-```
+```css
 /* good */
 #video {
   margin-top: 1em;
@@ -694,7 +694,7 @@ The opening brace should be on the same line as the last selector in a given rul
 
 Always start a new line for each selector and declaration.
 
-```
+```css
 /* bad */
 a:focus, a:active {
   position: relative; top: 1px;
@@ -715,7 +715,7 @@ h3 {
 
 Always put a blank line (two line breaks) between rules.
 
-```
+```css
 html {
   background: #fff;
 }
@@ -734,7 +734,7 @@ Use single (`''`) rather than double (`""`) quotation marks for attribute select
 
 > **Exception:** If you do need to use the `@charset` rule, use double quotation marks--[single quotation marks are not permitted](http://www.w3.org/TR/CSS21/syndata.html#charset).
 
-```
+```css
 /* bad */
 @import url("//www.google.com/css/maia.css");
 
@@ -758,7 +758,7 @@ html {
 
 If possible, group style sheet sections together by using comments. Separate sections with new lines.
 
-```
+```css
 /* Header */
 
 #adw-header {}

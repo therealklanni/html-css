@@ -565,7 +565,7 @@ Using namespaces helps preventing naming conflicts and can make maintenance easi
 Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
 
 ```css
-/* bad: does not separate the words “demo” and “image” */
+/* bad: does not separate the words "demo" and "image" */
 .demoimage {}
 
 /* bad: uses underscore instead of hyphen */
@@ -580,7 +580,7 @@ Do not concatenate words and abbreviations in selectors by any characters (inclu
 
 ### Hacks
 
-**Avoid user agent detection as well as CSS “hacks”--try a different approach first.**
+**Avoid user agent detection as well as CSS "hacks"--try a different approach first.**
 
 It’s tempting to address styling differences over user agent detection or special CSS filters, workarounds, and hacks. Both approaches should be considered last resort in order to achieve and maintain an efficient and manageable code base. Put another way, giving detection and hacks a free pass will hurt projects in the long run as projects tend to take the way of least resistance. That is, allowing and making it easy to use detection and hacks means using detection and hacks more frequently--and more frequently is too frequently.
 

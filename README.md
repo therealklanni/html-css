@@ -352,6 +352,8 @@ Also, indent them if they are child elements of a block, list, or table element.
 
 Use double (`""`) rather than single quotation marks (`''`) around attribute values.
 
+Even though quotes around attributes is optional, always put quotes around attributes for readability.
+
 ```html
 <!-- bad -->
 <a class='maia-button maia-button-secondary'>Sign in</a>

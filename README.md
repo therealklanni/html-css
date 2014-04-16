@@ -173,7 +173,7 @@ Using valid HTML is a measurable baseline quality attribute that contributes to 
 
 **Use HTML according to its purpose.**
 
-Use elements (sometimes incorrectly called "t"gs") for what they have been created for. For example, use `heading` elements for headings, `p` elements for paragraphs, `a` elements for anchors, etc.
+Use elements (sometimes incorrectly called "tags") for what they have been created for. For example, use `heading` elements for headings, `p` elements for paragraphs, `a` elements for anchors, etc.
 
 Using HTML according to its purpose is important for accessibility, reuse, and code efficiency reasons.
 
@@ -245,7 +245,7 @@ Separating structure from presentation from behavior is important for maintenanc
 
 There is no need to use entity references like `&mdash;`, `&rdquo;`, or `&#x263a;`, assuming the same encoding (UTF-8) is used for files and editors as well as among teams.
 
-The only exceptions apply to characters with special meaning in HTML (like `<` and `&`) as well as control or "i"visible" characters (like no-break spaces).
+The only exceptions apply to characters with special meaning in HTML (like `<` and `&`) as well as control or "invisible" characters (like no-break spaces).
 
 ```html
 <!-- bad -->
@@ -435,10 +435,10 @@ Using valid CSS is a measurable baseline quality attribute that allows to spot C
 
 Elements that occur **exactly once** inside a page should use IDs, otherwise, use classes. When in doubt, use a class name.
 
-* **Good** candidates for ids: header, footer, modal popups.
-* **Bad** candidates for ids: navigation, item listings, item view pages (ex: issue view).
+* **Good** candidates for IDs: header, footer, modal popups.
+* **Bad** candidates for IDs: navigation, item listings, item view pages (ex: issue view).
 
-When styling a component, start with a class namespace (prefer class names over ids), prefer direct descendant selectors by default, and use as little specificity as possible. Here is a good example:
+When styling a component, start with a class namespace (prefer class names over IDs), prefer direct descendant selectors by default, and use as little specificity as possible. Here is a good example:
 
 ```html
 <ul class="category-list">
@@ -476,7 +476,7 @@ Instead of presentational or cryptic names, always use ID and class names that r
 
 Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change.
 
-Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as "h"lpers."
+Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as "helpers."
 
 Using functional or generic names reduces the probability of unnecessary document or template changes.
 
@@ -506,7 +506,7 @@ Using functional or generic names reduces the probability of unnecessary documen
 
 Unless necessary (for example with helper classes), do not use element names in conjunction with IDs or classes.
 
-Avoiding unnecessary ancestor selectors is useful for [performance reasons](http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/.
+Avoiding unnecessary ancestor selectors is useful for [performance reasons](http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/).
 
 ```css
 /* bad */
